@@ -54,7 +54,7 @@ Every Base public repository must include the following elements to ensure quali
 ### Development Setup
 - `Makefile` or equivalent build automation
 - Clear instructions for setting up a development environment
-- Dependencies documented in `requirements.txt` and `requirements-dev.txt`
+- Dependencies documented in `pyproject.toml` with lock file (`uv.lock`)
 - Example commands for linting, testing, and building
 
 ### Acknowledgments
@@ -66,6 +66,7 @@ Every Base public repository must include the following elements to ensure quali
 ### Prerequisites
 
 - Python 3.11 or higher
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) (package manager)
 - Git
 
 ### Installation
@@ -73,24 +74,28 @@ Every Base public repository must include the following elements to ensure quali
 ```bash
 git clone https://github.com/AI-ModCon/BaseTemplate.git
 cd basetemplate
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+uv sync
 ```
 
 ### Development
 
 ```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
 # Run tests
-pytest
+uv run pytest
 
-# Run linting
-black . --check
-flake8 .
+# Lint code
+uv run ruff check .
+
+# Format code
+uv run ruff format .
 ```
+
+### Development Tools
+
+This project uses modern Python tools for a streamlined development experience:
+
+- **[uv](https://docs.astral.sh/uv/)**: A fast Python package manager that handles dependency installation and virtual environments. It's significantly faster than pip and ensures reproducible builds with `uv.lock`.
+- **[ruff](https://docs.astral.sh/ruff/)**: A unified linter and formatter that replaces multiple tools (flake8, black, isort). It's extremely fast and catches more issues with less configuration.
 
 ## Usage
 

@@ -46,14 +46,11 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 3. Create a new branch: `git checkout -b feature/my-feature`
 4. Set up development environment:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   pip install -r requirements-dev.txt
+   uv sync
    ```
 5. Make your changes
-6. Run tests: `pytest`
-7. Run linting: `black . && flake8 .`
+6. Run tests: `uv run pytest`
+7. Run linting and formatting: `uv run ruff check . && uv run ruff format .`
 8. Commit your changes: `git commit -am "Add my feature"`
 9. Push to the branch: `git push origin feature/my-feature`
 10. Submit a pull request
@@ -63,9 +60,9 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ### Python Code Style
 
 - Use [PEP 8](https://www.python.org/dev/peps/pep-0008/) as the coding standard
-- Use [Black](https://github.com/psf/black) for code formatting
-- Use [Flake8](https://flake8.pycqa.org/) for linting
+- Use [Ruff](https://docs.astral.sh/ruff/) for linting and formatting
 - Use type hints where appropriate
+- Enforce with: `uv run ruff check .` (lint) and `uv run ruff format .` (format)
 
 ### Commit Messages
 
