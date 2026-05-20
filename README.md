@@ -15,7 +15,7 @@ BaseTemplate provides a foundation for creating new repositories following open-
 - Issue and pull request templates
 - Comprehensive documentation structure
 
-## Required Elements for Base Public Repositories
+## Required Elements for ModCon Base Public Repositories
 
 Every Base public repository must include the following elements to ensure quality, maintainability, and compliance with open-source standards:
 
@@ -38,11 +38,13 @@ Every Base public repository must include the following elements to ensure quali
 
 ### Community Guidelines
 - `CONTRIBUTING.md` file with contribution guidelines
+  - This should include a stated policy on AI-generated/AI-assisted contributions
 - `CODE_OF_CONDUCT.md` file outlining community standards
 - Clear procedures for reporting issues and submitting pull requests
+- Branch protection to ensure that sufficient review is being performed on anything going into `main`
 
 ### Project Metadata
-- `pyproject.toml` or `setup.py` with clear metadata including:
+- `pyproject.toml` with clear metadata including:
   - Project name and description
   - Author and contact information
   - Dependencies and optional dependencies
@@ -56,14 +58,14 @@ Every Base public repository must include the following elements to ensure quali
 - Example commands for linting, testing, and building
 
 ### Acknowledgments
-- Acknowledgment of Genesis Mission support in the README or `ACKNOWLEDGMENTS.md`
-- Recognition of funding sources and institutional support
+- Acknowledgment of Genesis Mission support in the README
+- [Optional] Recognition of other funding sources
 
 ## Quick Start
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.11 or higher
 - Git
 
 ### Installation
@@ -100,7 +102,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for gu
 
 ## Support
 
-This project acknowledges support from the US Department of Energy's Genesis Mission.
+This project acknowledges support from the U.S. Department of Energy's Genesis Mission.
 
 ## License
 

@@ -18,7 +18,7 @@ Yes! Feel free to customize the template to suit your project's needs. All files
 
 ### Python version requirements?
 
-BaseTemplate requires Python 3.8 or higher. We test against Python 3.8 through 3.12.
+BaseTemplate requires Python 3.11 or higher. We test against Python 3.11 through 3.14.
 
 ### How do I set up a development environment?
 
