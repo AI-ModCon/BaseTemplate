@@ -1,7 +1,5 @@
 """Example test module."""
 
-import pytest
-
 
 class TestExample:
     """Example test class."""
