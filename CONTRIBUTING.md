@@ -64,6 +64,12 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 - Use type hints where appropriate
 - Enforce with: `uv run ruff check .` (lint) and `uv run ruff format .` (format)
 
+### Docstrings
+
+- Document all public functions, classes, and modules with docstrings
+- Choose a consistent docstring format (e.g., [Google-style](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings), [Sphinx-style](https://www.sphinx-doc.org/), or [NumPy-style](https://numpydoc.readthedocs.io/)) and document your choice in your project
+- Include parameter descriptions, return types, and examples where helpful
+
 ### Commit Messages
 
 - Use the present tense ("Add feature" not "Added feature")
@@ -77,6 +83,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 - Keep documentation up-to-date with code changes
 - Write clear, concise documentation
 - Include code examples where appropriate
+- For API documentation, consider [MkDocs](https://www.mkdocs.org/) with [Material](https://squidfunk.github.io/mkdocs-material/) theme and [mkdocstrings](https://mkdocstrings.github.io/) for auto-generating docs from docstrings
 
 ## Testing
 
