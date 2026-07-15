@@ -26,7 +26,7 @@ See the [Getting Started](./getting_started.md) guide for detailed setup instruc
 
 ### What Python packages are required?
 
-Check [requirements.txt](../requirements.txt) for production dependencies and [requirements-dev.txt](../requirements-dev.txt) for development tools.
+Check [pyproject.toml](../pyproject.toml) for project metadata, dependency groups, and tool configuration. The lockfile is [uv.lock](../uv.lock).
 
 ## Contributing
 
@@ -36,7 +36,7 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed contribution guidelines.
 
 ### What's the code style?
 
-We follow PEP 8 and use Black for formatting. See [CONTRIBUTING.md](../CONTRIBUTING.md#style-guidelines) for details.
+We follow PEP 8 and use Ruff for linting and formatting. See [CONTRIBUTING.md](../CONTRIBUTING.md#style-guidelines) for details.
 
 ### Do I need to write tests?
 
@@ -56,17 +56,17 @@ Yes, the Apache 2.0 license permits commercial use.
 
 ### Where can I report bugs?
 
-Please open an issue on [GitHub](https://github.com/your-org/basetemplate/issues).
+Please open an issue on [GitHub](https://github.com/AI-ModCon/BaseTemplate/issues).
 
 ### How do I suggest new features?
 
-Open a feature request on [GitHub](https://github.com/your-org/basetemplate/issues/new?template=feature_request.md).
+Open a feature request on [GitHub](https://github.com/AI-ModCon/BaseTemplate/issues/new?template=feature_request.md).
 
 ### Who should I contact with questions?
 
 You can:
-- Open a [GitHub Discussion](https://github.com/your-org/basetemplate/discussions)
-- Open an [Issue](https://github.com/your-org/basetemplate/issues)
+- Open a [GitHub Discussion](https://github.com/AI-ModCon/BaseTemplate/discussions)
+- Open an [Issue](https://github.com/AI-ModCon/BaseTemplate/issues)
 - Contact the ModCon base team
 
 ## Troubleshooting
@@ -75,19 +75,19 @@ You can:
 
 Make sure you've installed the dependencies:
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ### Tests failing?
 
 Ensure you have development dependencies installed:
 ```bash
-pip install -r requirements-dev.txt
+uv sync --group dev --group test
 ```
 
 ### Still having issues?
 
-Open an issue on [GitHub](https://github.com/your-org/basetemplate/issues) with:
+Open an issue on [GitHub](https://github.com/AI-ModCon/BaseTemplate/issues) with:
 - Your Python version
 - Error messages
 - Steps to reproduce the issue

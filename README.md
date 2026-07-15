@@ -97,6 +97,8 @@ This project uses modern Python tools for a streamlined development experience:
 - **[uv](https://docs.astral.sh/uv/)**: A fast Python package manager that handles dependency installation and virtual environments. It's significantly faster than pip and ensures reproducible builds with `uv.lock`.
 - **[ruff](https://docs.astral.sh/ruff/)**: A unified linter and formatter that replaces multiple tools (flake8, black, isort). It's extremely fast and catches more issues with less configuration.
 
+Other package managers and formatters can be used for new projects, these are simply our default recommendations.
+
 ## Usage
 
 For detailed usage information, see the [documentation](./docs) directory.
@@ -120,4 +122,4 @@ Please note that this project is released with a [Contributor Code of Conduct](.
 
 ## Questions or Issues?
 
-For questions or to report issues, please open an issue on [GitHub](https://github.com/your-org/basetemplate/issues).
+For questions or to report issues, please open an issue on [GitHub](https://github.com/AI-ModCon/BaseTemplate/issues).

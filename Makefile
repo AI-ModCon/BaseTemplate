@@ -4,39 +4,36 @@ help:
 	@echo "BaseTemplate - Development Tasks"
 	@echo ""
 	@echo "Available commands:"
-	@echo "  make install          Install production dependencies"
-	@echo "  make install-dev      Install development dependencies"
-	@echo "  make test             Run tests"
+	@echo "  make install          Sync the project environment with uv"
+	@echo "  make install-dev      Sync dev and test dependencies with uv"
+	@echo "  make test             Run tests with uv"
 	@echo "  make test-cov         Run tests with coverage report"
-	@echo "  make lint             Run linting checks"
-	@echo "  make format           Format code with black and isort"
-	@echo "  make type-check       Run type checking"
+	@echo "  make lint             Run linting checks with ruff"
+	@echo "  make format           Format code with ruff"
+	@echo "  make type-check       Run type checking with mypy"
 	@echo "  make clean            Remove build artifacts and cache files"
 	@echo "  make help             Show this help message"
 
 install:
-	pip install -r requirements.txt
+	uv sync
 
 install-dev:
-	pip install -r requirements-dev.txt
+	uv sync --group dev --group test
 
 test:
-	pytest
+	uv run pytest
 
 test-cov:
-	pytest --cov=basetemplate --cov-report=html --cov-report=term-missing
+	uv run pytest --cov=basetemplate --cov-report=html --cov-report=term-missing
 
 lint:
-	flake8 basetemplate tests
-	black --check basetemplate tests
-	isort --check-only basetemplate tests
+	uv run ruff check .
 
 format:
-	black basetemplate tests
-	isort basetemplate tests
+	uv run ruff format .
 
 type-check:
-	mypy basetemplate
+	uv run mypy basetemplate
 
 clean:
 	find . -type f -name '*.py[cod]' -delete

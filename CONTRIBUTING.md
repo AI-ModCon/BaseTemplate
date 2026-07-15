@@ -42,7 +42,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ## Development Setup
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/your-username/basetemplate.git`
+2. Clone your fork: `git clone https://github.com/AI-ModCon/BaseTemplate.git`
 3. Create a new branch: `git checkout -b feature/my-feature`
 4. Set up development environment:
    ```bash
