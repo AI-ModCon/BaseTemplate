@@ -5,7 +5,7 @@ Welcome to BaseTemplate! This guide will help you get started with this project.
 ## Prerequisites
 
 - Python 3.11 or higher
-- pip (Python package manager)
+- uv (Python package manager)
 - git (for version control)
 
 ## Installation
@@ -13,76 +13,55 @@ Welcome to BaseTemplate! This guide will help you get started with this project.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/basetemplate.git
+git clone https://github.com/AI-ModCon/BaseTemplate.git
 cd basetemplate
 ```
 
-### 2. Create a Virtual Environment
+### 2. Install Dependencies
 
 ```bash
-python -m venv venv
-```
-
-### 3. Activate the Virtual Environment
-
-**On macOS and Linux:**
-```bash
-source venv/bin/activate
-```
-
-**On Windows:**
-```bash
-venv\Scripts\activate
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Development Setup
 
-For development work, install the development dependencies:
+For development work, use the same `uv` environment and run tools through it:
 
 ```bash
-pip install -r requirements-dev.txt
+uv sync --group dev --group test
 ```
 
 ## Running Tests
 
 ```bash
-pytest
+uv run pytest
 ```
 
 Run tests with coverage:
 
 ```bash
-pytest --cov=basetemplate --cov-report=html
+uv run pytest --cov=basetemplate --cov-report=html --cov-report=term-missing
 ```
 
 ## Code Style
 
-We use Black for code formatting and Flake8 for linting.
+We use Ruff for both linting and formatting.
 
 ### Format Code
 
 ```bash
-black .
+uv run ruff format .
 ```
 
 ### Check Code Style
 
 ```bash
-black . --check
-flake8 .
+uv run ruff check .
 ```
 
 ### Sort Imports
 
-```bash
-isort .
-```
+Ruff handles import sorting as part of formatting and linting, so there is no separate `isort` step.
 
 ## Documentation
 
@@ -95,27 +74,17 @@ For more detailed documentation, see the [docs](.) directory.
 If you encounter issues with the virtual environment:
 
 ```bash
-# Remove and recreate
-rm -rf venv
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements-dev.txt
+# Recreate the environment from the lockfile
+uv sync
 ```
 
 ### Dependency Issues
 
-If you have issues installing dependencies:
-
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt --force-reinstall
-```
+If you have issues installing dependencies, run `uv sync` again to refresh the environment.
 
 ## Next Steps
 
 - Read the [Contributing Guidelines](../CONTRIBUTING.md)
-- Check out the [examples](./examples) directory
-- Review the [API documentation](./api)
 
 ## Support
 

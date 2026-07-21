@@ -7,54 +7,73 @@ on:
     branches: [ main, develop ]
 
 jobs:
+  check-lock:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+
+    - name: Check uv.lock is up-to-date
+      run: uv lock --check
+
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    
-    - name: Lint with flake8
-      run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    
-    - name: Format check with black
-      run: black . --check
-    
-    - name: Check imports with isort
-      run: isort . --check-only
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        enable-cache: true
+
+    - name: Sync dependencies
+      run: uv sync --group dev
+
+    - name: Lint with ruff
+      run: uv run ruff check .
+
+    - name: Format check with ruff
+      run: uv run ruff format . --check
 
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ['3.11', '3.12', '3.13', '3.14']
-    
+
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
+
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        enable-cache: true
+
+    - name: Sync dependencies
+      run: uv sync --group test
+
     - name: Run tests with pytest
-      run: pytest --cov=basetemplate --cov-report=xml
-    
+      run: uv run pytest --cov=basetemplate --cov-report=xml
+
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
         file: ./coverage.xml
         flags: unittests

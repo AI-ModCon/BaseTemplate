@@ -5,8 +5,6 @@ Welcome to the BaseTemplate documentation!
 ## Main Documentation Files
 
 - [Getting Started](./getting_started.md) - Setup and installation guide
-- [API Reference](./api/) - API documentation
-- [Examples](./examples/) - Usage examples and tutorials
 - [FAQ](./faq.md) - Frequently asked questions
 
 ## Project Resources
@@ -19,13 +17,13 @@ Welcome to the BaseTemplate documentation!
 
 ## Quick Links
 
-- [GitHub Repository](https://github.com/your-org/basetemplate)
-- [Issue Tracker](https://github.com/your-org/basetemplate/issues)
-- [Discussions](https://github.com/your-org/basetemplate/discussions)
+- [GitHub Repository](https://github.com/AI-ModCon/BaseTemplate)
+- [Issue Tracker](https://github.com/AI-ModCon/BaseTemplate/issues)
+- [Discussions](https://github.com/AI-ModCon/BaseTemplate/discussions)
 
 ## Getting Help
 
 - Check the [FAQ](./faq.md)
-- Search existing [GitHub Issues](https://github.com/your-org/basetemplate/issues)
-- Open a new [GitHub Issue](https://github.com/your-org/basetemplate/issues/new)
-- Start a [Discussion](https://github.com/your-org/basetemplate/discussions/new)
+- Search existing [GitHub Issues](https://github.com/AI-ModCon/BaseTemplate/issues)
+- Open a new [GitHub Issue](https://github.com/AI-ModCon/BaseTemplate/issues/new)
+- Start a [Discussion](https://github.com/AI-ModCon/BaseTemplate/discussions/new)
