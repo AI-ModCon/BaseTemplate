@@ -4,7 +4,7 @@
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please email your findings to [security contact email to be determined].
+Instead, please email your findings to modcon-base-code@lbl.gov.
 
 Please include the following details in your report:
 - Description of the vulnerability
