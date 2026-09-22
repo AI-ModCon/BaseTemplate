@@ -109,7 +109,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for gu
 
 ## Support
 
-This project acknowledges support from the U.S. Department of Energy's Genesis Mission.
+This project acknowledges support from the U.S. Department of Energy (DOE), Office of Science, Office of Advanced Scientific Computing Research in alignment with DOE's Genesis Mission.
 
 ## License
 
