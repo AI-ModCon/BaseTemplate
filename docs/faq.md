@@ -65,7 +65,6 @@ Open a feature request on [GitHub](https://github.com/AI-ModCon/BaseTemplate/iss
 ### Who should I contact with questions?
 
 You can:
-- Open a [GitHub Discussion](https://github.com/AI-ModCon/BaseTemplate/discussions)
 - Open an [Issue](https://github.com/AI-ModCon/BaseTemplate/issues)
 - Contact the ModCon base team
 

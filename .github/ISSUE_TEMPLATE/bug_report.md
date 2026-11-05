@@ -7,6 +7,10 @@ assignees: ''
 
 ---
 
+For suspected vulnerabilities or exposed credentials, follow SECURITY.md instead of
+opening a public issue. Sanitize logs, screenshots, notebooks, and traces; do not
+include secrets, restricted data, or private operational details.
+
 ## Describe the Bug
 
 A clear and concise description of what the bug is.
@@ -35,8 +39,9 @@ If applicable, add screenshots to help explain your problem.
 
 Please complete the following information:
 - OS: [e.g. Linux, Windows, macOS]
-- Python Version: [e.g. 3.9, 3.10]
-- Project Version: [e.g. 1.0.0]
+- Runtime/tool versions (if applicable):
+- Project version or commit:
+- Hardware, scheduler, container image, or agent client (if applicable):
 
 ## Additional Context
 
