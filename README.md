@@ -72,6 +72,7 @@ instructions only where the project's workflows need them.
 
 ### Acknowledgments
 - Acknowledgment of Genesis Mission support in the README
+- Government disclaimer in the README
 - [Optional] Recognition of other funding sources
 
 ### Additional Requirements by Project Type
@@ -150,7 +151,9 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for gu
 
 ## Support
 
-This project acknowledges support from the U.S. Department of Energy (DOE), Office of Science, Office of Advanced Scientific Computing Research in alignment with DOE's Genesis Mission.
+This material is based upon work supported by the U.S. Department of Energy (DOE), Office of Science, Office of Advanced Scientific Computing Research, as part of the Genesis Mission Platform.
+
+This Software was developed under funding from the U.S. DOE and the U.S. Government consequently retains certain rights. As such, the U.S. Government has been granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the Software to reproduce, distribute copies to the public, prepare derivative works, and perform publicly and display publicly, and to permit others to do so.
 
 ## License
 

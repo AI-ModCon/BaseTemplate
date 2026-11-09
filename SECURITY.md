@@ -63,6 +63,13 @@ especially when collecting logs, traces, datasets, or user submissions.
 - If a credential is exposed, revoke/rotate it immediately and notify the responsible
   operator privately. Removing the latest copy does not remove Git history or other
   copies. Coordinate history cleanup after containment.
+- Before making a repository or update public, review the full Git history and all
+  branches and tags that will be published for credentials and other sensitive
+  information. Use automated scanning where available and review its findings; a clean
+  scan does not prove that no sensitive information is present. If a credential is
+  found, revoke or rotate it immediately, then remove it from the history and verify
+  the cleanup with another scan before release. If it may already have been exposed,
+  follow the applicable incident-response process.
 
 ### Agents, Models, and External Code
 
