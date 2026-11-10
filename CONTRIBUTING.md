@@ -10,6 +10,13 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 ### Reporting Bugs
 
+For suspected vulnerabilities or exposed credentials, use the private route in
+[SECURITY.md](./SECURITY.md), not a public issue. Sanitize logs, notebooks, screenshots,
+and traces before sharing; omit tokens, keys, local account names, identifying paths,
+unnecessary personal identifiers, restricted data, and private operational details.
+See [Credentials and Sensitive Outputs](./SECURITY.md#credentials-and-sensitive-outputs)
+for the policy, placeholder examples, and permitted public attribution.
+
 Before creating bug reports, please check the issue list as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible:
 
 - **Use a clear and descriptive title**
@@ -32,10 +39,10 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ### Pull Requests
 
-- Follow the Python code style guidelines (see below)
+- Follow the style and validation guidelines applicable to the changed artifacts
 - Document new code based on the Documentation Styleguide
 - End all files with a newline
-- Avoid platform-dependent code
+- Document platform-dependent behavior and the configurations actually tested
 - Add tests for any new functionality
 - Include appropriate commit messages
 
@@ -87,10 +94,17 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ## Testing
 
-- Write tests for all new features
+- Add validation appropriate to new features or artifacts: code tests, schema fixtures,
+  skill checks, or documentation/example checks
 - Ensure all tests pass before submitting a pull request
 - Aim for high test coverage
 - Use descriptive test names
+- Keep quick checks separate from network, paid API, accelerator, and scheduler tests.
+  State external calls and resource requirements before asking contributors to run them.
+- Changes to CI must preserve least privilege: do not run untrusted PR code with
+  secrets, in privileged `pull_request_target`/`workflow_run` contexts, or on persistent
+  privileged runners. Pin actions to reviewed full commit SHAs, enforce dependency
+  locks in consuming jobs, and update pins deliberately.
 
 ## Guidelines for AI/LLM-Assisted Contributions
 
